@@ -10,7 +10,7 @@ controller.list = (req, res) => {
                 data: customers
             });
         });
-    }
-)}
+    });
+};
 
 module.exports = controller;

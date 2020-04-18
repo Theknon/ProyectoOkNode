@@ -7,7 +7,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Aprendiendo Node</h1>
-    
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">CRUD Node</a>
+    </nav>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-7">
+
+            </div>
+            <div class="col-ms-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="POST" >
+                            <div class="form-group">
+                                <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="direccion" placeholder="Direccion" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="telefono" placeholder="Telefono" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Nuevo Comprador
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
