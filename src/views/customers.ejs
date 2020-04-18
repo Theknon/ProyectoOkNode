@@ -32,6 +32,9 @@
                                     <td> <%= data[i].nombre %></td>
                                     <td> <%= data[i].direccion %></td>
                                     <td> <%= data[i].telefono %></td>
+                                    <td>
+                                        <a href="/delete/ <%= data[i].id %>" class="btn btn-danger">Borrar</a>
+                                    </td>
                                 </tr>  
                             <% } %>
                         <% } %>
