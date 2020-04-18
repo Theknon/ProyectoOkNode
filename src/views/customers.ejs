@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Nodejs</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a href="/" class="navbar-brand">CRUD Node</a>
-    </nav>
+<%- include ('partials/_header')  %>
+
     <!-- <pre> <%= data[0].direccion %> </pre> -->
     <div class="container">
         <div class="row mt-5">
@@ -21,7 +11,7 @@
                             <th>Nombre</th>
                             <th>Direccion</th>
                             <th>Telefono</th>
-                            <th>Accion</th>
+                            <th class="align text-lg-center">Acción</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,7 +23,9 @@
                                     <td> <%= data[i].direccion %></td>
                                     <td> <%= data[i].telefono %></td>
                                     <td>
-                                        <a href="/delete/ <%= data[i].id %>" class="btn btn-danger">Borrar</a>
+                                         <!-- <%= data[i].id %> Sirve para seleccionar el id para borrar o actualizar -->
+                                        <a href="/delete/ <%= data[i].id %>" class="btn btn-danger">Borrar</a> 
+                                        <a href="/update/ <%= data[i].id %>" class="btn btn-info">Actualizar</a>
                                     </td>
                                 </tr>  
                             <% } %>
@@ -55,7 +47,7 @@
                                 <input type="text" name="telefono" placeholder="Telefono" class="form-control">
                             </div>
                             <button type="submit" class="btn btn-primary">
-                                Nuevo Comprador
+                                Nuevo Dato
                             </button>
                         </form>
                     </div>
