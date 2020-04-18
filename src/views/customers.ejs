@@ -10,10 +10,33 @@
     <nav class="navbar navbar-dark bg-dark">
         <a href="/" class="navbar-brand">CRUD Node</a>
     </nav>
+    <!-- <pre> <%= data[0].direccion %> </pre> -->
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-7">
-
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Nombre</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(data){ %>
+                            <% for (var i = 0; i < data.length; i++){ %>
+                                <tr>
+                                    <td> <%= (i + 1) %></td>
+                                    <td> <%= data[i].nombre %></td>
+                                    <td> <%= data[i].direccion %></td>
+                                    <td> <%= data[i].telefono %></td>
+                                </tr>  
+                            <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
             </div>
             <div class="col-ms-5">
                 <div class="card">

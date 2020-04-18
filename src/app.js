@@ -22,6 +22,16 @@ app.use(myConnection(mysql, {
     database: 'dbnode'
 }, 'single'));
 
+
+
+app.use(express.urlencoded({extended: false})); 
+/* esta linea permite entender todos los datos de un formulario 
+lo que hace
+*/
+
+
+
+
 // rutas
 app.use('/', customerRoutes);
 
